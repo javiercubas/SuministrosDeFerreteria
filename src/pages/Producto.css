@@ -28,7 +28,7 @@
 .title-section-producto {
     font-size: 36px;
     font-weight: 700;
-    color: #1a98ff;
+    color: #ffb200;
     margin-top: 10px;
     margin-bottom: 0px;
     text-transform: uppercase;
@@ -78,7 +78,7 @@
 }
 
 .shipping-title {
-    background-color: #008000;
+    background-color: #ed0007;
     width: 48%;
     border-radius: 10px;
     color: white;
@@ -93,7 +93,7 @@
 }
 
 .active {
-    background-color: #1a98ff;
+    background-color: #ffb200;
 }
 
 .editar-cp {
@@ -105,7 +105,7 @@
 .editar-cp input {
     width: 15%;
     border-radius: 10px;
-    border: 3px solid #008000;
+    border: 3px solid #ed0007;
     outline: none;
     padding: 0 10px;
     font-size: 18px;
@@ -125,13 +125,13 @@
 }
 
 .editar-cp button:hover {
-    background-color: #008000;
+    background-color: #ed0007;
 }
 
 .cp-envio {
     font-size: 18px;
     font-weight: 500;
-    color: #008000;
+    color: #ed0007;
     margin-top: 0;
     margin-bottom: 10px;
     display: flex;
@@ -148,7 +148,7 @@
 .precio-producto-page {
     font-size: 28px;
     font-weight: 1000;
-    color: #1a98ff;
+    color: #ffb200;
     margin-top: 0;
     display: flex;
     align-items: center;
@@ -170,7 +170,7 @@
 .cta-producto-page {
 
     padding: 15px 20px;
-    background-color: #1a98ff;
+    background-color: #ffb200;
     border-radius: 10px;
     color: white;
     border: none;

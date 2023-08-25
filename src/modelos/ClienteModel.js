@@ -34,7 +34,7 @@ class ClienteModel {
 
 export const addCliente = async (cliente) => {
     try {
-        const response = await fetch('https://api.primepellet.es/clientes?bbdd=1', {
+        const response = await fetch('https://api.primepellet.es/clientes?bbdd=3', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export const addCliente = async (cliente) => {
 // Funcion para actualizar el pago de un cliente
 export const updateCliente = async (id, estado) => {
     try {
-        const response = await fetch(`https://api.primepellet.es/clientes/${id}?bbdd=1`, {
+        const response = await fetch(`https://api.primepellet.es/clientes/${id}?bbdd=3`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

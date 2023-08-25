@@ -846,13 +846,13 @@ const Producto = (props) => {
                             </div>
                         ) : codigoPostal == undefined ? (
                             <p className="cp-envio" onClick={() => setIsEditing(true)} style={{ cursor: 'pointer' }}>
-                                Añadir un código postal para calcular el precio <FaPlus size={15} color="#008000" />
+                                Añadir un código postal para calcular el precio <FaPlus size={15} color="#ed0007" />
                             </p>
                         )
                             :
                             (
                                 <p className="cp-envio" onClick={() => setIsEditing(true)}>
-                                    Código postal: <span>{codigoPostal}</span> <FaPencilAlt size={15} style={{ cursor: 'pointer' }} color="#008000" />
+                                    Código postal: <span>{codigoPostal}</span> <FaPencilAlt size={15} style={{ cursor: 'pointer' }} color="#ed0007" />
                                 </p>
                             )}
                         {showAlert && (

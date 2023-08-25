@@ -17,7 +17,7 @@
     top: 20px;
     left: 20px;
     margin: 0;
-    color: #1a98ff;
+    color: #ffb200;
     text-transform: uppercase;
     font-style: italic;
 }
@@ -70,7 +70,7 @@
 .finaliza-input {
     height: 40px;
     border-radius: 5px;
-    border: 3px solid #1a98ff;
+    border: 3px solid #ffb200;
     padding: 5px;
     font-size: 12px;
     font-weight: 500;
@@ -96,7 +96,7 @@
     text-align: center;
     text-transform: uppercase;
     margin-top: 0;
-    background-color: #1a98ff;
+    background-color: #ffb200;
     color: white;
     cursor: pointer;
 }

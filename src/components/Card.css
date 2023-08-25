@@ -1,6 +1,6 @@
 .card-box {
     border-radius: 10px;
-    border: 5px solid #1a98ff;
+    border: 5px solid #ffb200;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@
 }
 
 .cta-card {
-    background-color: #1a98ff;
+    background-color: #ffb200;
     color: white;
     border: 0;
     width: 100%;
@@ -50,9 +50,9 @@
 }
 
 .card-box:hover{
-    border-color: #008000;
+    border-color: #ed0007;
 }
 
 .card-box:hover .cta-card{
-    background-color: #008000;
+    background-color: #ed0007;
 }

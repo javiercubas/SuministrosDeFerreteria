@@ -6,7 +6,7 @@ nav {
     top: 0%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #008000;
+    background-color: #ed0007;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +99,7 @@ nav.scrolled .navLinks ul li a {
 
 .navLinks ul li a:hover,
 ul li a:focus {
-    color: #1a98ff;
+    color: #ffb200;
     outline: none;
 }
 
@@ -109,7 +109,7 @@ ul li a:focus {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #008000;
+    background-color: #ed0007;
     display: none; /* Por defecto, el submenú estará oculto */
     border-radius: 5px;
     padding: 10px 20px;
@@ -137,7 +137,7 @@ ul li a:focus {
 }
 
 .submenu a:hover, .submenu div:hover {
-    color: #1a98ff;
+    color: #ffb200;
 }
 
 /* Resto de estilos */
