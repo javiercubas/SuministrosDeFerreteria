@@ -54,7 +54,7 @@ const Router = () => {
                 <Route
                     key={producto.id} // Asegúrate de tener una propiedad 'id' única para cada producto en Firestore
                     path={`/${producto.nombre.toLowerCase().trim().replaceAll(" ", "-").replaceAll("á", "a").replaceAll("é", "e").replaceAll("í", "i").replaceAll("ó", "o").replaceAll("ú", "u")}`}
-                    element={<Producto nombre={producto.nombre} imagen={producto.imagen} precio={producto.precio} descripcion={producto.descripcion} pack={producto.pack} estrellas={producto.estrellas} iva={producto.iva}/>}
+                    element={<Producto nombre={producto.nombre} imagen={producto.imagen} precio={producto.precio} descripcion={producto.descripcion} pack={producto.pack} estrellas={producto.estrellas} iva={producto.iva} muestra={producto.muestra} />}
                 />
             ))}
             {marcas.map(marca => (

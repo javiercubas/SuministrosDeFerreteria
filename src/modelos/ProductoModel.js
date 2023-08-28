@@ -15,7 +15,8 @@ class ProductoModel {
         oferta,
         tipo,
         url,
-        iva
+        iva,
+        muestra
     }) {
         this.id = id;
         this.nombre = nombre;
@@ -30,6 +31,7 @@ class ProductoModel {
         this.url = url;
         this.tipo = tipo;
         this.iva = iva;
+        this.muestra = muestra;
     }
 }
 
