@@ -8,7 +8,7 @@ import FinalizaTuCompra from '../components/FinalizaTuCompra';
 
 const Producto = (props) => {
 
-    const { nombre, imagen, precio, descripcion, pack, estrellas } = props;
+    const { nombre, imagen, precio, descripcion, pack, estrellas, iva } = props;
 
     const precioPack = precio * pack;
 
@@ -860,7 +860,7 @@ const Producto = (props) => {
                     </div>
                 )}
                 {!envio ? (
-                    <div className="precio-producto-page">{precioPack.toFixed(2)} € <span>(IVA INCLUIDO)</span></div>
+                    <div className="precio-producto-page">{precioPack.toFixed(2)} € <span>{iva==1 ? '(IVA INCLUIDO)' : '+ IVA'}</span></div>
                 ) : (
                     <div className="precio-producto-page">{precioFinal} € <span>(IVA INCLUIDO)</span></div>
                 )}
