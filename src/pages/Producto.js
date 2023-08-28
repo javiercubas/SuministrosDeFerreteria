@@ -869,7 +869,7 @@ const Producto = (props) => {
                 {!envio ? (
                     <div className="precio-producto-page">{precioPack.toFixed(2)} € <span>{iva == 1 ? '(IVA INCLUIDO)' : '+ IVA'}</span></div>
                 ) : (
-                    <div className="precio-producto-page">{precioFinal} € <span>(IVA INCLUIDO)</span></div>
+                    <div className="precio-producto-page">{precioFinal} € <span>{iva == 1 ? '(IVA INCLUIDO)' : '+ IVA'}</span></div>
                 )}
                 <div className="descripcion-producto-page">
                     <div dangerouslySetInnerHTML={{ __html: descripcion }} />
