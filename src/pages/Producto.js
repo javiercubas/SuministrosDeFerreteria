@@ -4,7 +4,6 @@ import { FaPencilAlt, FaPlus } from 'react-icons/fa';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Cookies from 'universal-cookie';
-import axios from 'axios';
 import FinalizaTuCompra from '../components/FinalizaTuCompra';
 
 const Producto = (props) => {
@@ -868,7 +867,7 @@ const Producto = (props) => {
                 <div className="descripcion-producto-page">
                     <div dangerouslySetInnerHTML={{ __html: descripcion }} />
                 </div>
-                <button className="cta-producto-page" onClick={handleShowPopup}>COMPRAR AHORA</button>
+                <button className="cta-producto-page" onClick={handleShowPopup}>PEDIR AHORA</button>
                 {showPopup && <FinalizaTuCompra nombre={nombre} imagen={imagen} precioPack={precioPack} envio={envio} precioFinal={precioFinal} onClose={() => {
                     setShowPopup(false);
                     document.body.style.overflow = 'unset';
