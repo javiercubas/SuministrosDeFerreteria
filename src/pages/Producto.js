@@ -28,6 +28,7 @@ const Producto = (props) => {
 
         if (muestra == 1) {
             let precioMuestra = precio + 4.84;
+            console.log(precioMuestra);
             return precioMuestra;
         }
         else {
