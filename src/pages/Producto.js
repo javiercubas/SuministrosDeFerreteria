@@ -26,6 +26,7 @@ const Producto = (props) => {
 
     function calcularPrecios(precio, cp, tipoPallet, muestra) {
 
+        console.log(muestra);
         if (muestra == 1) {
             let precioMuestra = precio + 4.84;
             console.log(precioMuestra);
