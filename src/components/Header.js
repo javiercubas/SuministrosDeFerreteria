@@ -7,6 +7,7 @@ import { getMarcas } from "../modelos/MarcaModel";
 import { getPartners } from "../modelos/PartnerModel";
 import { getTiposProductos } from "../modelos/TipoProductoModel";
 import PromoPopUp from "./PromoPopUp";
+import { FaSignInAlt } from 'react-icons/fa';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,91 +68,98 @@ const Header = () => {
 
   return (
     <>
-    <nav className={`nav ${isMenuOpen ? "menu-open" : ""}`}>
-      <div className="logo">
-        <a href="/"></a>
-      </div>
-      <div className="navAll">
-        <div className="movil-title">
-          <h2>Menu principal</h2>
-          <FaTimes size={32} color="var(--logo)" onClick={handleMenuClick} />
+      <nav className={`nav ${isMenuOpen ? "menu-open" : ""}`}>
+        <div className="logo">
+          <a href="/"></a>
         </div>
-        <div className="navLinks">
-          <ul>
-            <li><a href="/">INICIO</a></li>
-            <li
-              onClick={() => handleSubmenuClick(isSubProductosOpen, setIsSubProductosOpen)}
-              onMouseEnter={() => setIsSubProductosOpen(true)}
-              onMouseLeave={() => setIsSubProductosOpen(false)}
-            >
-              <TitleElement href="/productos">PRODUCTOS</TitleElement>
-              {isSubProductosOpen && (
+        <div className="navAll">
+          <div className="movil-title">
+            <h2>Menu principal</h2>
+            <FaTimes size={32} color="var(--logo)" onClick={handleMenuClick} />
+          </div>
+          <div className="navLinks">
+            <ul>
+              <li><a href="/">INICIO</a></li>
+              <li
+                onClick={() => handleSubmenuClick(isSubProductosOpen, setIsSubProductosOpen)}
+                onMouseEnter={() => setIsSubProductosOpen(true)}
+                onMouseLeave={() => setIsSubProductosOpen(false)}
+              >
+                <TitleElement href="/productos">PRODUCTOS</TitleElement>
+                {isSubProductosOpen && (
+                  <ul className="submenu" onMouseEnter={() => setIsSubProductosOpen(true)} onMouseLeave={() => setIsSubProductosOpen(false)}>
+                    {tiposProductos.map(tipoProducto => (
+                      <li key={tipoProducto.id}><a href={tipoProducto.url}>{tipoProducto.nombre}</a></li>
+                    ))}
+                  </ul>
+                )}
                 <ul className="submenu" onMouseEnter={() => setIsSubProductosOpen(true)} onMouseLeave={() => setIsSubProductosOpen(false)}>
-                  {tiposProductos.map(tipoProducto => (
-                    <li key={tipoProducto.id}><a href={tipoProducto.url}>{tipoProducto.nombre}</a></li>
-                  ))}
+                  <li><a href="/productos">Todos los productos</a></li>
                 </ul>
-              )}
-            </li>
-            <li
-              onClick={() => handleSubmenuClick(isSubProductoresOpen, setIsSubProductoresOpen)}
-              onMouseEnter={() => setIsSubProductoresOpen(true)}
-              onMouseLeave={() => setIsSubProductoresOpen(false)}
-            >
-              <TitleElement href="/productores">PRODUCTORES</TitleElement>
-              {isSubProductoresOpen && (
-                <ul className="submenu" onMouseEnter={() => setIsSubProductoresOpen(true)} onMouseLeave={() => setIsSubProductoresOpen(false)}>
-                  {productores.map(productor => (
-                    <li key={productor.id}><a href={`/productor/${productor.nombre.toLowerCase().trim().replaceAll(' ', '-')}`}>{productor.nombre}</a></li>
-                  ))}
-                </ul>
-              )}
-            </li>
-            <li
-              onClick={() => handleSubmenuClick(isSubMarcasOpen, setIsSubMarcasOpen)}
-              onMouseEnter={() => setIsSubMarcasOpen(true)}
-              onMouseLeave={() => setIsSubMarcasOpen(false)}
-            >
-              <TitleElement href="/marcas">MARCAS</TitleElement>
-              {isSubMarcasOpen && (
-                <ul className="submenu" onMouseEnter={() => setIsSubMarcasOpen(true)} onMouseLeave={() => setIsSubMarcasOpen(false)}>
-                  {marcas.map(marca => (
-                    <li key={marca.id}><a href={`/marca/${marca.nombre.toLowerCase().trim().replaceAll(' ', '-')}`}>{marca.nombre}</a></li>
-                  ))}
-                </ul>
-              )}
-            </li>
-            <li
-              onClick={() => handleSubmenuClick(isSubPartnersOpen, setIsSubPartnersOpen)}
-              onMouseEnter={() => setIsSubPartnersOpen(true)}
-              onMouseLeave={() => setIsSubPartnersOpen(false)}
-            >
-              <TitleElement href="/partners">PARTNERS</TitleElement>
-              {isSubPartnersOpen && (
-                <ul className="submenu" onMouseEnter={() => setIsSubPartnersOpen(true)} onMouseLeave={() => setIsSubPartnersOpen(false)}>
-                  {partners.map(partner => (
-                    <li key={partner.id}>
-                      {partner.id == 1 ? <div onClick={handleShowPopup}>{partner.nombre}</div> : <a href={partner.url}>{partner.nombre}</a>}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-            <li><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
-          </ul>
+              </li>
+              <li
+                onClick={() => handleSubmenuClick(isSubProductoresOpen, setIsSubProductoresOpen)}
+                onMouseEnter={() => setIsSubProductoresOpen(true)}
+                onMouseLeave={() => setIsSubProductoresOpen(false)}
+              >
+                <TitleElement href="/productores">PRODUCTORES</TitleElement>
+                {isSubProductoresOpen && (
+                  <ul className="submenu" onMouseEnter={() => setIsSubProductoresOpen(true)} onMouseLeave={() => setIsSubProductoresOpen(false)}>
+                    {productores.map(productor => (
+                      <li key={productor.id}><a href={`/productor/${productor.nombre.toLowerCase().trim().replaceAll(' ', '-')}`}>{productor.nombre}</a></li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+              <li
+                onClick={() => handleSubmenuClick(isSubMarcasOpen, setIsSubMarcasOpen)}
+                onMouseEnter={() => setIsSubMarcasOpen(true)}
+                onMouseLeave={() => setIsSubMarcasOpen(false)}
+              >
+                <TitleElement href="/marcas">MARCAS</TitleElement>
+                {isSubMarcasOpen && (
+                  <ul className="submenu" onMouseEnter={() => setIsSubMarcasOpen(true)} onMouseLeave={() => setIsSubMarcasOpen(false)}>
+                    {marcas.map(marca => (
+                      <li key={marca.id}><a href={`/marca/${marca.nombre.toLowerCase().trim().replaceAll(' ', '-')}`}>{marca.nombre}</a></li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+              <li
+                onClick={() => handleSubmenuClick(isSubPartnersOpen, setIsSubPartnersOpen)}
+                onMouseEnter={() => setIsSubPartnersOpen(true)}
+                onMouseLeave={() => setIsSubPartnersOpen(false)}
+              >
+                <TitleElement href="/partners">PARTNERS</TitleElement>
+                {isSubPartnersOpen && (
+                  <ul className="submenu" onMouseEnter={() => setIsSubPartnersOpen(true)} onMouseLeave={() => setIsSubPartnersOpen(false)}>
+                    {partners.map(partner => (
+                      <li key={partner.id}>
+                        {partner.id == 1 ? <div onClick={handleShowPopup}>{partner.nombre}</div> : <a href={partner.url}>{partner.nombre}</a>}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+              <li><a href="/sobre-nosotros">SOBRE NOSOTROS</a></li>
+              <li>
+                <a href="/login">INICIAR SESIÓN</a>
+                <FaSignInAlt color="white" size={24} />
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div className="hamburger" onClick={handleMenuClick}>
-        <AiOutlineMenu size={32} color="white" />
-      </div>
-    </nav>
+        <div className="hamburger" onClick={handleMenuClick}>
+          <AiOutlineMenu size={32} color="white" />
+        </div>
+      </nav>
 
-{showPopup && <PromoPopUp onClose={() => {
-  setShowPopup(false);
-  document.body.style.overflow = 'unset';
-}} type={1} />}
-</>
+      {showPopup && <PromoPopUp onClose={() => {
+        setShowPopup(false);
+        document.body.style.overflow = 'unset';
+      }} type={1} />}
+    </>
   );
 };
 

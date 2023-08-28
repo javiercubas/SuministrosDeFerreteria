@@ -70,7 +70,7 @@ nav.scrolled .navLinks ul li a {
 }
 
 .navLinks {
-    width: 75%;
+    width: 95%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -87,7 +87,11 @@ nav.scrolled .navLinks ul li a {
 
 .navLinks ul li {
     list-style: none;
-    position: relative; /* Añadimos posición relativa para alinear el submenú */
+    position: relative;
+    /* Añadimos posición relativa para alinear el submenú */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .navLinks ul li a {
@@ -110,17 +114,21 @@ ul li a:focus {
     left: 50%;
     transform: translateX(-50%);
     background-color: #ed0007;
-    display: none; /* Por defecto, el submenú estará oculto */
+    display: none;
+    /* Por defecto, el submenú estará oculto */
     border-radius: 5px;
     padding: 10px 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     flex-direction: column;
+    max-height: 70vh;
+    flex-wrap: wrap;
 }
 
 /* Mostramos el submenú cuando el desplegable está abierto */
 .menu-open .navLinks ul li:hover .submenu,
 .menu-open .navLinks ul li:focus .submenu {
-    display: flex; /* Mostramos el submenú como una columna */
+    display: flex;
+    /* Mostramos el submenú como una columna */
 }
 
 .submenu li {
@@ -128,7 +136,8 @@ ul li a:focus {
     text-align: center;
 }
 
-.submenu a, .submenu div {
+.submenu a,
+.submenu div {
     color: white;
     text-decoration: none;
     font-size: 1.1vw;
@@ -136,7 +145,8 @@ ul li a:focus {
     cursor: pointer;
 }
 
-.submenu a:hover, .submenu div:hover {
+.submenu a:hover,
+.submenu div:hover {
     color: #ffb200;
 }
 
@@ -240,7 +250,7 @@ ul li a:focus {
         color: var(--text);
     }
 
-    .navLinks ul li div{
+    .navLinks ul li div {
         color: var(--text);
         font-weight: 600;
         font-size: 18px;
@@ -251,7 +261,8 @@ ul li a:focus {
     }
 
     .submenu {
-        position: static; /* Cambiamos la posición del submenú en móvil */
+        position: static;
+        /* Cambiamos la posición del submenú en móvil */
         width: 100%;
         display: none;
         background-color: transparent;
@@ -270,7 +281,8 @@ ul li a:focus {
     }
 
     .submenu a {
-        font-size: 18px; /* Tamaño de fuente para enlaces del submenú en móvil */
+        font-size: 18px;
+        /* Tamaño de fuente para enlaces del submenú en móvil */
     }
 
     .joinButton a {

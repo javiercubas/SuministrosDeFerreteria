@@ -1,10 +1,11 @@
 import ProductoModel from './ProductoModel.js';
 
 class TipoProductoModel {
-    constructor({ id, nombre, url }) {
+    constructor({ id, nombre, url, categoria_superior }) {
         this.id = id;
         this.nombre = nombre;
         this.url = url;
+        this.categoria_superior = categoria_superior;
     }
 }
 

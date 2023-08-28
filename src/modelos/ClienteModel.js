@@ -4,31 +4,25 @@ class ClienteModel {
         nombre,
         apellidos,
         correo,
+        contrasena,
         telefono,
         direccion,
         codigoPostal,
         provincia,
         localidad,
         dni,
-        producto,
-        precio,
-        pagado,
-        envio,
     }) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correo = correo;
+        this.contrasena = contrasena;
         this.telefono = telefono;
         this.direccion = direccion;
         this.codigoPostal = codigoPostal;
         this.provincia = provincia;
         this.localidad = localidad;
         this.dni = dni;
-        this.producto = producto;
-        this.precio = precio;
-        this.pagado = pagado;
-        this.envio = envio;
     }
 }
 
@@ -47,7 +41,7 @@ export const addCliente = async (cliente) => {
         }
 
         const clienteResponse = await response.json();
-        
+
         // Aquí se agrega el retorno del ID del cliente recién creado
         return clienteResponse.insertId;
     } catch (error) {
