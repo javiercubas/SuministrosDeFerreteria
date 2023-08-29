@@ -93,9 +93,9 @@ const Header = () => {
                     ))}
                   </ul>
                 )}
-                <ul className="submenu" onMouseEnter={() => setIsSubProductosOpen(true)} onMouseLeave={() => setIsSubProductosOpen(false)}>
+                {/* <ul className="submenu" onMouseEnter={() => setIsSubProductosOpen(true)} onMouseLeave={() => setIsSubProductosOpen(false)}>
                   <li><a href="/productos">Todos los productos</a></li>
-                </ul>
+                </ul> */}
               </li>
               <li
                 onClick={() => handleSubmenuClick(isSubProductoresOpen, setIsSubProductoresOpen)}
